@@ -1,0 +1,44 @@
+' {$STAMP BS2}}
+' {$PBASIC 2.5}
+
+
+' Lines OF text are commented out by preceeding them with an single quotation mark
+segA PIN 0
+segB PIN 1
+segC PIN 2
+repeats VAR    Word ' VAR is used to define certain functions that are called during the application
+control VAR Word 'var --> control is used for function pin_all_high
+DO     'Starts loop
+  IF (segA AND segB = 1) THEN  'Turns green led on and plays 4000 on microphone when Push Button 1 and 2 are pressed
+   HIGH 4
+   FREQOUT 15,50,4000
+   ELSE
+   LOW 4
+
+   ENDIF
+  IF (segA AND segC = 1) THEN  'Turns red led on and plays 2000 on microphone when Push Button 1 and 3 are pressed
+   HIGH 3
+   FREQOUT 15,50,2000
+   ELSE
+   LOW 3
+  ENDIF
+
+IF (segB AND segC = 1) THEN    'Turns both the red and green led on and plays 6000 on microphone when Push Button 2 and 3 are pressed
+   HIGH 3
+   HIGH 4
+   FREQOUT 15,50,6000
+   ELSE
+   LOW 3
+   LOW 4
+ENDIF
+
+  IF (segA AND segB AND segC = 1) THEN  'Alternates bewteen green and red leds and microphone
+  HIGH 3
+  LOW 3
+  FREQOUT 15,50,2000
+  HIGH 4
+  LOW 4
+  FREQOUT 15,50,4000
+  ENDIF  ' Ends loop
+
+LOOP

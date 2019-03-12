@@ -1,0 +1,110 @@
+' {$STAMP BS2}
+' {$PBASIC 2.5}
+
+counter VAR Byte
+revolutions VAR Byte
+
+DO
+PAUSE 2500
+FOR revolutions = 1 TO 6
+
+   FOR counter = 1 TO 87
+
+    PULSOUT 12, 850
+    PULSOUT 13, 850
+
+  NEXT
+
+  FOR counter = 1 TO 100
+
+    PULSOUT 12, 850
+    PULSOUT 13, 750
+
+  NEXT
+  FOR counter = 1 TO 87
+
+    PULSOUT 12, 850
+    PULSOUT 13, 850
+
+  NEXT
+
+  FOR counter = 1 TO 100
+
+    PULSOUT 12, 850
+    PULSOUT 13, 750
+
+  NEXT
+  FOR counter = 1 TO 87
+
+    PULSOUT 12, 850
+    PULSOUT 13, 850
+
+  NEXT
+
+  FOR counter = 1 TO 100
+
+    PULSOUT 12, 850
+    PULSOUT 13, 750
+
+  NEXT
+   FOR counter = 1 TO 87
+
+    PULSOUT 12, 850
+    PULSOUT 13, 850
+
+  NEXT
+
+  FOR counter = 1 TO 100
+
+    PULSOUT 12, 850
+    PULSOUT 13, 750
+
+  NEXT
+   FOR counter = 1 TO 87
+
+    PULSOUT 12, 850
+    PULSOUT 13, 850
+
+  NEXT
+
+  FOR counter = 1 TO 100
+
+    PULSOUT 12, 850
+    PULSOUT 13, 750
+
+  NEXT
+   FOR counter = 1 TO 87
+
+    PULSOUT 12, 850
+    PULSOUT 13, 850
+
+  NEXT
+
+  FOR counter = 1 TO 100
+
+    PULSOUT 12, 850
+    PULSOUT 13, 750
+
+  NEXT
+  FOR counter = 1 TO 87
+
+    PULSOUT 12, 850
+    PULSOUT 13, 850
+
+  NEXT
+
+  FOR counter = 1 TO 100
+
+    PULSOUT 12, 850
+    PULSOUT 13, 750
+
+  NEXT
+
+ NEXT
+
+  PAUSE 1000
+
+LOOP
+'87 is .25 turn
+'197 is .5 turn
+'

@@ -1,0 +1,87 @@
+' {$STAMP BS2}
+' {$PBASIC 2.5}
+
+
+red PIN 3
+green PIN 5
+spk PIN 15
+
+repeats VAR Word
+counter VAR Word
+warning VAR Word
+
+
+
+
+  PAUSE 1000
+
+  GOSUB warn 
+
+  GOSUB cycle
+
+  GOSUB cycle
+
+  GOSUB cycle
+
+  GOSUB cycle
+
+  STOP
+
+cycle:
+  FOR counter = 1 TO 250
+    PULSOUT 12, 650
+    PULSOUT 13, 850
+  NEXT
+
+  GOSUB warn_1
+
+  FOR counter = 1 TO 250
+   PULSOUT 12,650
+   PULSOUT 13,650
+  NEXT
+
+  GOSUB warn_1
+
+  FOR counter = 1 TO 250
+    PULSOUT 12, 650
+    PULSOUT 13, 850
+  NEXT
+
+  GOSUB warn_1
+
+  FOR counter = 1 TO 115
+    PULSOUT 12,650
+    PULSOUT 13,650
+  NEXT
+
+  GOSUB warn_1
+
+RETURN
+
+warn:
+  FOR repeats = 1 TO 5
+    HIGH 3
+    LOW 7
+    FREQOUT 15, 100, 5000
+  PAUSE 200
+    LOW 3
+    HIGH 7
+    FREQOUT 15, 100, 7000
+  PAUSE 200
+    LOW 7
+  NEXT
+RETURN
+
+warn_1:
+  FOR repeats = 1 TO 3
+    HIGH 3
+    LOW 7
+    FREQOUT 15, 100, 5000
+  PAUSE 200
+    LOW 3
+    HIGH 7
+    FREQOUT 15, 100, 7000
+  PAUSE 200
+    LOW 7
+  NEXT
+RETURN

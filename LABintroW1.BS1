@@ -1,0 +1,27 @@
+' {$STAMP BS2}
+' {$PBASIC 2.5}
+
+
+' Lines OF text are commented out by preceeding them with an single quotation mark
+
+repeats VAR    Word ' VAR is used to define certain functions that are called during the application
+
+DO  'Starts the code
+  'FREQOUT SETS THE PARAMETERS FOR THE MICROPhone syntax --> FREQOUT pin#, duration(ms), freq(hz)
+  HIGH 0
+  LOW 1
+  HIGH 2
+  HIGH 3
+  HIGH 4
+  HIGH 5
+  LOW 6
+  PAUSE 1000
+  LOW 0
+  LOW 1
+  LOW 2
+  HIGH 3
+  LOW 4
+  LOW 5
+  HIGH 6
+  PAUSE 1000
+ LOOP 'Tells the computer to run the loop again

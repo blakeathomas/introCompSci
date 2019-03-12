@@ -1,0 +1,27 @@
+' {$STAMP BS2}
+' {$PBASIC 2.5}
+
+
+' Lines OF text are commented out by preceeding them with an single quotation mark
+
+repeats VAR    Word ' VAR is used to define certain functions that are called during the application
+Counter VAR Word
+segA PIN 11
+redLight PIN 3
+greenLight PIN 5
+
+DO
+  HIGH segA
+  GOSUB blinkLight
+
+LOOP
+
+blinkLight:
+FOR Counter = 1 TO 3
+HIGH redLight
+LOW  greenLight
+PAUSE 500
+LOW redLight
+HIGH greenLight
+NEXT: PAUSE 500
+RETURN

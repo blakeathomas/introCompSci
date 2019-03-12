@@ -1,0 +1,49 @@
+' {$STAMP BS2}
+' {$PBASIC 2.5}
+
+
+' Lines OF text are commented out by preceeding them with an single quotation mark
+
+repeats VAR    Word ' VAR is used to define certain functions that are called during the application
+
+DO  'Starts the code
+  'The following code is controlling leds 3 and 5
+
+  HIGH 3  'Turns p3 on by sending a high or 1 to the pin
+  HIGH 5  'Turns p5 on by sending a high or 1 to the pin
+  PAUSE 5000     'Pauses for 5000ms
+
+  HIGH 3  'Turns p3 on by sending a high or 1 to the pin
+  LOW 5   'Turns p5 off by sending a low or 0 to the pin
+  PAUSE 1000     'Pauses for 1000ms
+
+  LOW 3   'Turns p3 off by sending a low or 0 to the pin
+  HIGH 5  'Turns p5 on by sending a hi or 1 to the pin
+  PAUSE 1000     'Pauses for 1000ms
+
+  LOW 3   'Turns p3 off by sending a low or 0 to the pin
+  LOW 5   'Turns p5 off by sending a low or 0 to the pin
+  PAUSE 3000     'Pauses for 3000ms
+
+  FOR repeats = 1 TO 10 'Runs the previous code until repeats = 10 and then runs following code
+
+    HIGH 3    'Turns p3 on by sending a high or 1 to the pin
+    LOW 5     'Keeps p5 off by sneding a lo or 0 to the pin
+    PAUSE 100 'Pauses for 100ms
+
+    LOW 3    'Turns p3 off by sending a low or 0 to the pin
+    HIGH 5   'Turns p5 on by sending a hi or 1 to the pin
+    PAUSE 100       'Pauses for 100ms
+
+  NEXT 'When the previous code has been run it goes on to the following code
+
+  LOW 3   'Turns p3 off by sending a low or 0 to the pin
+  LOW 5   'Turns p5 off by sending a low or 0 to the pin
+  PAUSE 3000     'Pauses for 3000ms
+  'Freqout sets the parameters for the microphone syntax --> FREQOUT pin#, duration(ms), freq(hz)
+  FREQOUT 9, 1000, 3000 'Turns microphone @ p9 on for 1000ms at 3000hz
+  FREQOUT 9, 2000, 2000 'Turns microphone @ p9 on for 2000ms at 2000hz
+  FREQOUT 9, 3000, 5000 'Turns microphone @ p9 on for 3000ms at 5000hz
+  PAUSE 2000 'Pauses loop for 2000ms
+
+LOOP 'Tells the computer to run the loop again
