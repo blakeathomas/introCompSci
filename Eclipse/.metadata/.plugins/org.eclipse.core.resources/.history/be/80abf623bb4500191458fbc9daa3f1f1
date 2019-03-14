@@ -1,0 +1,19 @@
+/**
+ * 
+ */
+
+/**
+ * @author ThomasBA21
+ *
+ */
+public class HelloWorld {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// Prints "Hello World!" to the screen
+				System.out.println("\"Never give in. \n Never give in.\n Never, \n never,\n never,\n never—in nothing, great or small, large or petty—never give in, except to convictions of honour and good sense. Never yield to force. Never yield to the apparently overwhelming might of the enemy.\"");
+	}
+
+}
