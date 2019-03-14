@@ -1,0 +1,8 @@
+
+public class TwoParagraphWriteOut {
+	public static void main(String[] args) {
+	System.out.println("\t Supply Chain is a very important part of any business. \n If not done right, the business will eventually fail. \n If it is done right, the business has a much beteter chance of suceeding. \n");
+	System.out.println("");
+	System.out.println("");
+}
+}

@@ -1,7 +1,7 @@
 
 public class StringQuoteTwo {
 	public static void main(String[] args) {
-	System.out.println(" \"Never give in. \n");
+	System.out.println("\"Never give in. \n");
 	System.out.println("Never give in.\n");
 	System.out.println("Never,");
 	System.out.println("never,");
