@@ -1,0 +1,47 @@
+package Operators;
+import java.util.Scanner;
+public class TestOperators {
+public static void main(String[] args) {
+System.out.println("Enter an integer between 1 and 10 to be used as
+the first value: ");
+Scanner scanint = new Scanner(System.in);
+int x = scanint.nextInt();
+System.out.println("Enter an integer between 1 and 10 to be used as
+the second value: ");
+int y = scanint.nextInt();
+System.out.println("Enter an integer between 1 and 10 to be used as
+the third value: ");
+int z = scanint.nextInt();
+scanint.close();
+int firstAnswer = operationOne(x);
+System.out.println("The answer to part one of the problems is: " +
+firstAnswer);
+int secondAnswer = operationTwo(x,y);
+System.out.println("The answer to part two of the problems is: " +
+secondAnswer);
+int thirdAnswer = operationThree(x,y,z);
+System.out.println("The answer to part three of the problems is: " +
+thirdAnswer);
+int finalAnswer;
+// finalAnswer = (Create an equation that utilizes all of the arithmetic
+operators and all three answers)
+System.out.println("The final answer is: " + finalAnswer);
+}
+public static int operationOne(int x1) {
+int answerOne;
+// answerOne = (Create an equation that utilizes all of the arithmetic
+operators with the one input parameter)
+return answerOne;
+}
+public static int operationTwo(int x1, int x2) {
+int answerTwo;
+operators with both input parameters)
+return answerTwo;
+}
+public static int operationThree(int x1, int x2, int x3) {
+int answerThree;
+// answerThree = (Create an equation that utilizes all of the arithmetic
+operators using all three input parameters)
+return answerThree;
+}
+}
