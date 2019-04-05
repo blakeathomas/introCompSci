@@ -1,0 +1,15 @@
+import java.util.Scanner;
+public class HomeWorkScratch {
+
+	public static void main(String[] args) {
+		System.out.println("Enter an integer:");
+		int max = new Scanner (System.in).nextInt ();
+		for (int i=1; i <=9; i++){
+			System.out.println("Enter an integer:");
+			int number = new Scanner (System.in).nextInt ();
+			if  (number > max) max = number;
+		}
+		System.out.println("The largest integer entered was:" + max);
+	}
+
+}

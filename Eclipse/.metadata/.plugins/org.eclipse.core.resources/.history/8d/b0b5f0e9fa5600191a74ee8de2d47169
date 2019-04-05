@@ -1,0 +1,42 @@
+package compsci;
+import java.text.DecimalFormat;
+import java.util.Scanner;
+public class GradeCalc {
+
+	
+	//-----------------------------------------------------------------
+	// Computes the average of a set of values entered by the user.
+	// The running sum is printed as the numbers are entered.
+	//-----------------------------------------------------------------
+	public static void main (String[] args){
+	int count = 0;
+	int num = 1;
+	
+	Scanner scanNum = new Scanner (System.in);
+	System.out.print ("How many grades would you like to calculate?: ");
+	num = scanNum.nextInt() +1 ;
+	
+	
+	int sum = 0, value;
+	double average;
+	Scanner scan = new Scanner (System.in);
+	System.out.print ("Enter Subject " + (count + 1) + "(0 to quit): ");
+	value = scan.nextInt();
+	
+	
+	while (count <= num) // sentinel value of 0 to terminate loop
+	{
+	count++;
+	sum += value;
+	System.out.print ("Enter Subject " + (count + 1) + "(0 to quit): ");
+	value = scan.nextInt();
+	}
+	
+	System.out.println ();
+	System.out.println ("Number of values entered: " + num);
+	average = (double)sum / num;
+	DecimalFormat fmt = new DecimalFormat ("0.###");
+	System.out.println ("The average grade is " + fmt.format(average));
+	}
+}
+
