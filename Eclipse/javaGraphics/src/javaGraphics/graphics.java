@@ -1,6 +1,11 @@
 package javaGraphics;
 
 import java.awt.Color;
+import java.awt.Graphics; 
+import java.awt.Point; 
+import java.awt.Polygon; 
+import javax.swing.JFrame; 
+import javax.swing.JPanel;
 import java.awt.Font;
 import java.awt.Graphics;
 
@@ -18,47 +23,42 @@ public class graphics extends JFrame{
         test.setResizable(false);
         test.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         test.setVisible(true);
+        Color skyBlue = new Color(135,206,235);
+        test.setBackground(skyBlue);
 
     }
    // g.fillOval(x, y, width, height);
     public void paint(Graphics g){
     g.setColor(new Color(0x00ff00));
     //skyBlue color
-    Color skyBlue = new Color(135,206,235);
-   //greenGrass color
-    Color greenGrass = new Color(0x7CF00);
-    //sun color
-    Color canaryYellow = new Color(0xFFEF00);
-    
-    g.setColor(skyBlue);	
-    g.fillRect(0,0,1200,400);
-    
-    g.setColor(greenGrass);	
-    g.fillRect(0,400,1200,500);
+
+
    
-       /* 
+   
+       
         
-        g.fillOval(150, 145, 60, 65);
-        g.setColor(Color.white);
-        g.fillOval(160, 162, 17, 14);
-        g.fillOval(183, 162, 17, 14);
-        g.setColor(Color.blue);
-        g.fillOval(163, 164, 11, 11);
-        g.fillOval(186, 164, 11, 11);
-        g.setColor(new Color(0xff00ff));
-        g.fillOval(180, 180, 10, 20);
-        g.drawString("test", 100, 100);
-        int randX = (int) (Math.random());
-        for (int i = 50; i<450; i+=25)
-        	g.drawRect(i, i, i, i);
+      
+        
+        //for (int i = 0; i<450; i+=10)
+      //  	g.drawOval(i, i, i, i);
         g.setColor(Color.black);
-        for (int i = 450; i>50; i-=15)
-        	g.drawRect(randX, i, i, i);
-        
+        for (int i = 0; i<400; i+=2)
+        	g.drawRect(i, i, 800, 400);
         g.setColor(Color.white);
-        g.setFont(new Font("TimesRoman", Font.BOLD, 150)); 
-        g.drawString("TEST", 300, 200);
-        g.drawRect(700, 500, 200, 100);
+        for (int i = 200; i<600; i+=2)
+        	g.drawRect(i, i, 1000, 600);
+        g.setColor(Color.black);
+        for (int i = 400; i<800; i+=2)
+        	g.drawRect(i, i, 1200, 800);
+        g.setColor(Color.white);
+        for (int i = 600; i<1000; i+=2)
+        	g.drawRect(i, i, 1400, 1000);
+        g.setColor(Color.white);
+  
+        
+       
+      
     }
-    */
-}}
+ 
+}
+

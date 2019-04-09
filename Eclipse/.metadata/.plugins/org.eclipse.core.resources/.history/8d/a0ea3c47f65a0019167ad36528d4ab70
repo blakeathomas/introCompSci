@@ -1,6 +1,6 @@
-package java;
+package javaGraphics;
 
-public class GradeCalc {
+public class triangle {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub

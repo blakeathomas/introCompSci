@@ -28,7 +28,8 @@ public class GradeCalc {
 
 		for (count = 2; count <= num; count++) {
 			sum += value;
-			System.out.print("Enter Subject " + (gradeCount) + " grade (0-100): ");
+			System.out.print("Enter Subject " + (gradeCount)
+					+ " grade (0-100): ");
 			value = scan.nextInt();
 			gradeCount++;
 		}
