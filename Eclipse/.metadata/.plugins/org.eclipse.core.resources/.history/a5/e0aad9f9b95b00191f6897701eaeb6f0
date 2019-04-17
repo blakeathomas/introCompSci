@@ -1,0 +1,68 @@
+package javaGraphics;
+
+import java.awt.Color;
+import java.awt.Graphics; 
+import java.awt.Point; 
+import java.awt.Polygon; 
+import javax.swing.JFrame; 
+import javax.swing.JPanel;
+import java.awt.Font;
+import java.awt.Graphics;
+
+import javax.swing.JFrame;
+
+public class graphics extends JFrame{
+    private static final long serialVersionUID = 1L;
+    public static final int WIDTH = 1200;
+    public static final int HEIGHT = 900;
+    
+
+    public static void main(String[] args) {
+        graphics test = new graphics();
+        test.setSize(WIDTH, HEIGHT);
+        test.setResizable(false);
+        test.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        test.setVisible(true);
+        Color skyBlue = new Color(135,206,235);
+        test.setBackground(skyBlue);
+
+    }
+   // g.fillOval(x, y, width, height);
+    public void paint(Graphics g){
+    g.setColor(new Color(0x00ff00));
+    //skyBlue color
+
+
+   g.setColor(Color.BLUE);
+   for (int i = 0; i<500 && i != 20; i++){
+	   int posX = (int) (Math.random()*WIDTH);
+	   int posY = (int) (Math.random()*HEIGHT);
+	   g.drawRect(posX, posY, 40, 40);
+   }
+       
+        
+      
+        
+        /*for (int i = 0; i<450; i+=10)
+       	g.drawOval(i, i, i, i);
+        g.setColor(Color.black);
+        for (int i = 0; i<400; i+=2)
+        	g.drawRect(i, i, 800, 400);
+        g.setColor(Color.white);
+        for (int i = 200; i<600; i+=2)
+        	g.drawRect(i, i, 1000, 600);
+        g.setColor(Color.black);
+        for (int i = 400; i<800; i+=2)
+        	g.drawRect(i, i, 1200, 800);
+        g.setColor(Color.white);
+        for (int i = 600; i<1000; i+=2)
+        	g.drawRect(i, i, 1400, 1000);
+        g.setColor(Color.white);
+  */
+        
+       
+      
+    }
+ 
+}
+
